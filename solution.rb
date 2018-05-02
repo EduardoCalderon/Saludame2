@@ -1,8 +1,8 @@
 require "sinatra"
 
-  get '/' do
-    if params[:makers] && params[:makers]!= ""
-      "<h1>Hola #{params[:makers]}!<h1>"
+  get '/:nombre' do
+    if params[:nombre] && params[:nombre]!= ""
+      "<h1>Hola #{params[:nombre]}!<h1>"
     else
       "<h1>Hola desconocido!<h1>"
   end
